@@ -1,6 +1,8 @@
 <div class="center">
   <div class="pic">
-    <% if current_user.mood == "happy" %>
+    <% if current_user.admin %>
+      <img src="http://images6.fanpop.com/image/quiz/1039000/1039690_1378598441689_492_492.jpg" alt="" />
+    <% elsif current_user.mood == "happy" %>
       <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQyII-b2SQQXMIpt3VQnWvKi6Kda9-1cB0QbqhZczxS2JUFNqrE" height="250">
     <% else %>
       <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSImiQXlqcwp3SleqOPVxbZi3FMeRekG0VEEEsKehYXmqQ_l_Ib" height="250" />
