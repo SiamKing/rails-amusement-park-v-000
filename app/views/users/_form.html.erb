@@ -1,0 +1,31 @@
+<%= bootstrap_form_for(@user) do |f| %>
+<%= render 'shared/error_messages' %>
+<div class="field">
+  <%= f.text_field :name %>
+</div>
+<div class="field">
+  <%= f.text_field :height, label: 'Height (in inches)' %>
+</div>
+<div class="field">
+  <%= f.text_field :happiness, label: 'How happy are you? (1-5 scale)' %>
+</div>
+<div class="field">
+  <%= f.text_field :nausea, label: 'How nauseous are you? (1-5 scale)' %>
+</div>
+<div class="field">
+  <%= f.text_field :tickets, label: 'How many dollars are in your pocket?' %>
+</div>
+<div class="field">
+  <%= f.password_field :password %>
+</div>
+
+<div class="field">
+  <%= f.form_group :admin do %>
+    <%= f.check_box :admin, label: 'Check box if you are a theme park owner', inline: true %>
+  <% end %>
+</div>
+
+<div class="actions">
+  <%= f.submit "#{@submit}", class: "btn btn-primary" %>
+</div>
+<% end %>

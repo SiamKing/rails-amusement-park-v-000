@@ -1,0 +1,34 @@
+<div class="center">
+  <div class="pic">
+    <% if current_user.mood == "happy" %>
+      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQyII-b2SQQXMIpt3VQnWvKi6Kda9-1cB0QbqhZczxS2JUFNqrE" height="250">
+    <% else %>
+      <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSImiQXlqcwp3SleqOPVxbZi3FMeRekG0VEEEsKehYXmqQ_l_Ib" height="250" />
+    <% end %>
+  </div>
+  <div class="info">
+    <% if current_user.admin %>
+    <p><strong>ADMIN</strong></p>
+    <% end %>
+    <p>
+      <strong>Name: </strong><%= current_user.name %>
+    </p>
+    <p>
+      <strong>Tickets: </strong><%= current_user.tickets %>
+    </p>
+    <% if @current_user.happiness %>
+    <p>
+      <strong>Mood: </strong><%= current_user.mood %>
+    </p>
+    <% end %>
+    <p>
+      <strong>Height: </strong><%= current_user.height %> inches
+    </p>
+    <p>
+      <%= link_to "Edit", edit_user_path %>
+    </p>
+    <p>
+      <%= link_to "See attractions", attractions_path %>
+    </p>
+  </div>
+</div>
